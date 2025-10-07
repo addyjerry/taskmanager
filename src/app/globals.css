@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-one: #0a4ba6;
+  --secondary-one: #a9c5ec;
+  --secondary-two: #839dc1;
+  --tertiary-one: #08336f;
+  --primary-text-one: #000000;
+  --primary-text-two: #262626;
+  --primary-text-three: #ffffff;
+  --primary-logo: #aaaaaa;
 }
 
 @theme inline {
@@ -10,6 +18,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --primary-color: var(--primary-one);
 }
 
 @media (prefers-color-scheme: dark) {

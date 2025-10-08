@@ -1,7 +1,25 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { Variants } from "framer-motion";
+import CustomAnimatedSection from "./animatedSection";
 
+const slideFromUp: Variants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
+const slideFromDown: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
 const About = () => {
   const tools = [
     {
@@ -50,7 +68,10 @@ const About = () => {
         ))}
       </div>
       <section className="flex flex-col lg:flex-row ">
-        <div className="lg:px-25 py-50 px-3">
+        <CustomAnimatedSection
+          variants={slideFromUp}
+          className="lg:px-25 py-50 px-3"
+        >
           <Image
             src="/logos/logo2.png"
             width={200}
@@ -73,8 +94,8 @@ const About = () => {
               Get Started <ChevronRight />
             </button>
           </div>
-        </div>
-        <div>
+        </CustomAnimatedSection>
+        <CustomAnimatedSection variants={slideFromDown}>
           <Image
             src="/photos/hero.png"
             width={500}
@@ -83,7 +104,7 @@ const About = () => {
             className="w-full lg:w-[60vw] h-screen justify-self-center"
             loading="lazy"
           />
-        </div>
+        </CustomAnimatedSection>
       </section>
     </div>
   );

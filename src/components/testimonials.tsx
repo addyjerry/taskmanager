@@ -1,7 +1,25 @@
 import React from "react";
 import { Testimony } from "@/constants/testimonials";
 import Image from "next/image";
+import { Variants } from "framer-motion";
+import CustomAnimatedSection from "./animatedSection";
 
+const slideFromUp: Variants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
+const slideFromDown: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
 const Testimonials = () => {
   return (
     <div className="py-5 px-3 md:px-18 border-b-1">
@@ -13,7 +31,11 @@ const Testimonials = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-between w-full ">
         {Testimony.map((testimonial) => (
-          <div key={testimonial.name} className="py-5 mx-5">
+          <CustomAnimatedSection
+            variants={slideFromDown}
+            key={testimonial.name}
+            className="py-5 mx-5"
+          >
             <>{testimonial.rating}</>
             <p className="font-bold text-xl py-10">{testimonial.quote}</p>
             <Image
@@ -24,7 +46,7 @@ const Testimonials = () => {
             />
             <h2 className="font-bold">{testimonial.name}</h2>
             <p>{testimonial.position}</p>
-          </div>
+          </CustomAnimatedSection>
         ))}
       </div>
     </div>

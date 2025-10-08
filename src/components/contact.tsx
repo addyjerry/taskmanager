@@ -1,7 +1,25 @@
 import { ContactDetails } from "@/constants/contact";
 import Image from "next/image";
 import React from "react";
+import { Variants } from "framer-motion";
+import CustomAnimatedSection from "./animatedSection";
 
+const slideFromUp: Variants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
+const slideFromDown: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
 const Contact = () => {
   return (
     <div className="md:px-18 px-3 text-lg py-25 border-b-1 justify-center lg:justify-between">
@@ -11,7 +29,7 @@ const Contact = () => {
       </p>
       <span className="flex flex-col lg:flex-row gap-5">
         {ContactDetails.map((contact) => (
-          <div key={contact.title}>
+          <CustomAnimatedSection variants={slideFromUp} key={contact.title}>
             <Image
               src={contact.icon}
               width={60}
@@ -24,7 +42,7 @@ const Contact = () => {
             <p className="py-5">
               <u>{contact.link}</u>
             </p>
-          </div>
+          </CustomAnimatedSection>
         ))}
       </span>
     </div>

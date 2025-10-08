@@ -4,7 +4,24 @@ import Image from "next/image";
 import { menulist } from "@/constants/navconst";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { Menu, SidebarCloseIcon } from "lucide-react";
-
+import { Variants } from "framer-motion";
+import CustomAnimatedSection from "./animatedSection";
+const slideFromUp: Variants = {
+  hidden: { opacity: 0, y: -100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
+const slideFromDown: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -97,7 +114,10 @@ export function Header() {
         <Menu onClick={() => setIsMenu(!isMenu)} className="mt-3 z-20" />
       </div>
       {isMenu && (
-        <div className="fixed inset-0 w-full h-screen bg-gray-600 opacity-99 z-19 p-5 text-xl text-center">
+        <CustomAnimatedSection
+          variants={slideFromUp}
+          className="fixed inset-0 w-full h-screen bg-gray-600 opacity-99 z-19 p-5 text-xl text-center"
+        >
           <SidebarCloseIcon
             onClick={() => setIsMenu(!isMenu)}
             className="mt-3 "
@@ -142,7 +162,7 @@ export function Header() {
             <button className="bg-white p-3 ">Sign in</button>
             <button className="text-white bg-primary p-3">Sign Up</button>
           </div>
-        </div>
+        </CustomAnimatedSection>
       )}
     </div>
   );

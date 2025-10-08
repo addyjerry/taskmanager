@@ -24,7 +24,7 @@ const Header = () => {
             </span>
           ))}
         </div>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5 p-3">
           <button className="bg-white border-1 p-3 border-third">
             Sign in
           </button>

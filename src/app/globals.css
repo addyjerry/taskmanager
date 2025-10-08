@@ -18,7 +18,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --primary-color: var(--primary-one);
+  --color-primary: var(--primary-one);
+  --color-secondary: var(--secondary-one);
+  --color-tertiary: var(--secondary-two);
+  --color-third: var(--tertiary-one);
+  --color-fourth: var(--primary-text-one);
+  --color-fifth: var(--primary-text-two);
+  --color-sixth: var(--primary-text-three);
+  --color-logo: var(--primary-text-logo);
 }
 
 @media (prefers-color-scheme: dark) {

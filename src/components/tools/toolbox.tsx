@@ -7,7 +7,7 @@ const Toolbox = () => {
   const [activeTab, setActiveTab] = useState(Toolpanel[0].id);
   return (
     <div className="flex flex-row">
-      <div className="rounded-xl lg:p-2 m-1 bg-white text-sm lg:text-lg h-full">
+      <div className="rounded-xl p-1 lg:p-2 m-1 bg-white text-sm lg:text-lg lg:h-full fixed lg:relative -ml-5">
         {Toolpanel.map((panel) => (
           <ul key={panel.id} className="flex flex-col py-3 lg:px-3 px-1 ">
             <li
@@ -25,7 +25,7 @@ const Toolbox = () => {
           <Power /> <span className="hidden lg:flex ">sign out</span>
         </button>
       </div>
-      <div className="w-full">
+      <div className="w-full ml-8 lg:ml-0">
         {Toolpanel.find((panel) => panel.id === activeTab)?.content}
       </div>
     </div>

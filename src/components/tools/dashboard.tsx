@@ -13,14 +13,14 @@ import React from "react";
 const Dashboard = () => {
   const numbersArray = Array.from({ length: 28 }, (_, i) => i + 1);
   return (
-    <div className="flex flex-col w-full text-lg ">
+    <div className="flex flex-col w-full text-xs lg:text-lg ">
       {/* headder */}
       <div className="p-2 bg-white rounded-2xl ">
         <ul className="flex flex-row justify-between">
-          <li className="flex flex-row gap-2">
+          <li className="flex flex-col lg:flex-row gap-2">
             <p
-              className="bg-primary  rounded text-white h-full
-            p-3"
+              className="bg-primary rounded text-white h-full
+           p-0  lg:p-3 "
             >
               <Menu />
             </p>
@@ -30,10 +30,10 @@ const Dashboard = () => {
               <h2 className="font-bold">268</h2>
             </span>
           </li>
-          <li className="flex flex-row gap-2">
+          <li className="flex flex-col lg:flex-row gap-2">
             <p
               className="bg-primary  rounded text-white h-full
-            p-3"
+            p-0  lg:p-3"
             >
               <Check />
             </p>
@@ -42,10 +42,10 @@ const Dashboard = () => {
               <h2 className="font-bold">268</h2>
             </span>
           </li>
-          <li className="flex flex-row gap-2">
+          <li className="flex flex-col lg:flex-row gap-2">
             <p
               className="bg-primary  rounded text-white h-full
-            p-3"
+            p-0  lg:p-3"
             >
               <Timer />
             </p>
@@ -54,10 +54,10 @@ const Dashboard = () => {
               <h2 className="font-bold">268</h2>
             </span>
           </li>
-          <li className="flex flex-row gap-2">
+          <li className="flex flex-col lg:flex-row gap-2">
             <p
               className="bg-primary  rounded text-white h-full
-            p-3"
+            p-0 lg:p-3"
             >
               <AlertCircle />
             </p>
@@ -129,10 +129,7 @@ const Dashboard = () => {
               <span className="flex flex-row justify-between">
                 <p className="p-4 bg-gray-100 rounded-lg text-sm my-2"> Day</p>
                 <p className="p-4 bg-gray-100 rounded-lg text-sm my-2"> Week</p>
-                <p className="p-4 bg-gray-100 rounded-lg text-sm my-2">
-                  {" "}
-                  Month
-                </p>
+                <p className="p-4 bg-gray-100 rounded-lg text-sm my-2">Month</p>
               </span>
               <span className="flex flex-row border-y-1 my-2 justify-between py-4">
                 <p>February</p>
@@ -146,7 +143,7 @@ const Dashboard = () => {
                   (day, index) => (
                     <p
                       key={index}
-                      className="p-2 rounded-xl text-center bg-gray-100 m-2"
+                      className="lg:p-2 rounded-xl text-center bg-gray-100 m-1 lg:m-2"
                     >
                       {day}
                     </p>
@@ -157,7 +154,7 @@ const Dashboard = () => {
           </div>
         </div>
         {/* second batch */}
-        <div className="flex flex-row gap-5 ">
+        <div className="flex flex-col lg:flex-row gap-5 ">
           {/* meeting */}
           <div className="bg-white px-5 w-full rounded-lg">
             <span>

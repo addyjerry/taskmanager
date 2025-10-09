@@ -5,7 +5,7 @@ import * as React from "react";
 
 const Home = () => {
   return (
-    <div className="rounded h-screen w-full p-5  bg-secondary place-self-center flex flex-col ">
+    <div className="rounded  w-full p-5  bg-secondary place-self-center flex flex-col ">
       <section className="flex flex-row justify-between py-3">
         <Image
           src="/logos/logo3.png"

@@ -6,6 +6,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import { Menu, SidebarCloseIcon } from "lucide-react";
 import { Variants } from "framer-motion";
 import CustomAnimatedSection from "./animatedSection";
+import Link from "next/link";
 const slideFromUp: Variants = {
   hidden: { opacity: 0, y: -100 },
   visible: {
@@ -54,10 +55,14 @@ export function Header() {
             ))}
           </div>
           <div className="flex flex-row gap-5 p-3">
-            <button className="bg-white border-1 p-3 border-third">
-              Sign in
-            </button>
-            <button className="text-white bg-primary p-3">Sign Up</button>
+            <Link href="/Login">
+              <button className="bg-white border-1 p-3 border-third">
+                Sign in
+              </button>
+            </Link>
+            <Link href="/Signup">
+              <button className="text-white bg-primary p-3">Sign Up</button>
+            </Link>
           </div>
         </div>
         {isOpen && (
@@ -159,8 +164,13 @@ export function Header() {
             </li>
           </ul>
           <div className="flex flex-col gap-5 p-3">
-            <button className="bg-white p-3 ">Sign in</button>
-            <button className="text-white bg-primary p-3">Sign Up</button>
+            <button className="bg-white p-3 ">
+              <Link href="/Login">Sign in</Link>
+            </button>
+
+            <button className="text-white bg-primary p-3">
+              <Link href="/SignUp">Sign Up </Link>
+            </button>
           </div>
         </CustomAnimatedSection>
       )}

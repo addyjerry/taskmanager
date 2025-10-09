@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Ads = () => {
   return (
@@ -9,8 +10,12 @@ const Ads = () => {
         for a free trial now!
       </p>
       <span className="flex flex-col lg:flex-row gap-5">
-        <button className="bg-primary text-white p-3">Sign Up</button>
-        <button className="border-1 p-3">Request</button>
+        <button className="bg-primary text-white p-3">
+          <Link href="/SignUp">Sign Up</Link>
+        </button>
+        <button className="border-1 p-3">
+          <Link href="/SignUp">Request</Link>
+        </button>
       </span>
     </div>
   );

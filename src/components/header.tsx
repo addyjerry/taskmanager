@@ -15,14 +15,7 @@ const slideFromUp: Variants = {
     transition: { duration: 0.7, ease: "easeInOut" },
   },
 };
-const slideFromDown: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeInOut" },
-  },
-};
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -60,7 +53,7 @@ export function Header() {
                 Sign in
               </button>
             </Link>
-            <Link href="/Signup">
+            <Link href="/SignUp">
               <button className="text-white bg-primary p-3">Sign Up</button>
             </Link>
           </div>

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import Dates from "./calendar";
 
 const Dashboard = () => {
   const numbersArray = Array.from({ length: 28 }, (_, i) => i + 1);
@@ -152,6 +153,9 @@ const Dashboard = () => {
               </span>
             </div>
           </div>
+          {/* <div className="-ml-5">
+            <Dates />
+          </div> */}
         </div>
         {/* second batch */}
         <div className="flex flex-col lg:flex-row gap-5 ">
@@ -171,7 +175,7 @@ const Dashboard = () => {
               </span>
               <span className="">
                 <p className="text-xl font-bold py-5">Meeting people</p>
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap">
                   <Image
                     src="/avatars/boy.png"
                     width={50}

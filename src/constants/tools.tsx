@@ -4,7 +4,7 @@ import Help from "@/components/tools/help";
 import Tasks from "@/components/tools/Tasks";
 import Teams from "@/components/tools/Teams";
 import Setting from "@/components/tools/settings";
-import Date from "@/components/tools/calendar";
+import Dates from "@/components/tools/calendar";
 import Messages from "@/components/tools/inbox";
 
 import {
@@ -41,7 +41,7 @@ export const Toolpanel = [
     id: 4,
     name: "Calendar",
     icon: <Calendar />,
-    content: <Date />,
+    content: <Dates />,
   },
   {
     id: 5,

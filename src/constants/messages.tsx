@@ -1,0 +1,51 @@
+export const Chats = [
+  {
+    id: 1,
+    name: "Derrick",
+    avatar: "/avatars/boy.png",
+    text: "I heard you had a meeting yesterday,tell me what I missed",
+    time: "6:03 am",
+  },
+  {
+    id: 2,
+    name: "Kojo",
+    avatar: "/avatars/cap.png",
+    text: "I heard you had a meeting yesterday,tell me what I missed",
+    time: "6:03 am",
+  },
+  {
+    id: 3,
+    name: "Adjoa",
+    avatar: "/avatars/girl.png",
+    text: ",Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil saepe aliquam eius omnis fuga reiciendis iste obcaecati, eos cumque, beatae facere laborum architecto nobis debitis consequatur, rem consequuntur molestiae magni.",
+    time: "6:03 am",
+  },
+  {
+    id: 4,
+    name: "Danso",
+    avatar: "/avatars/boy.png",
+    text: "I heard you had a meeting yesterday,tell me what I missed",
+    time: "6:03 am",
+  },
+  {
+    id: 5,
+    name: "Ofosu",
+    avatar: "/avatars/boy.png",
+    text: "I heard you had a meeting yesterday,tell me what I missed",
+    time: "6:03 am",
+  },
+  {
+    id: 6,
+    name: "Akua",
+    avatar: "/avatars/girl.png",
+    text: "I heard you had a meeting yesterday,tell me what I missed",
+    time: "6:03 am",
+  },
+  {
+    id: 7,
+    name: "Thomas",
+    avatar: "/avatars/boy.png",
+    text: "I heard you had a meeting yesterday,tell me what I missed",
+    time: "6:03 am",
+  },
+];

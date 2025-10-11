@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Variants } from "framer-motion";
 import CustomAnimatedSection from "./animatedSection";
+import Link from "next/link";
 
 const slideFromUp: Variants = {
   hidden: { opacity: 0, y: -50 },
@@ -63,7 +64,9 @@ const About = () => {
               {tool.title}
             </h1>
             <p className="py-5">{tool.description}</p>
-            <button className="py-5">{tool.buttontext}</button>
+            <button className="py-5">
+              <Link href="/SignUp">{tool.buttontext}</Link>
+            </button>
           </div>
         ))}
       </div>
@@ -91,7 +94,9 @@ const About = () => {
           <div className="flex flex-col lg:flex-row gap-10 py-10 text-lg">
             <button className="border-1 p-2">Learn More </button>
             <button className="flex p-2">
-              Get Started <ChevronRight />
+              <Link href="/SignUp">
+                Get Started <ChevronRight />
+              </Link>
             </button>
           </div>
         </CustomAnimatedSection>

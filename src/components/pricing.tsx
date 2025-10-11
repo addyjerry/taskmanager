@@ -1,6 +1,7 @@
 import { priceCard } from "@/constants/priceCard";
 import { Check } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 const Pricing = () => {
   return (
@@ -40,7 +41,7 @@ const Pricing = () => {
                       {monthly.planprice}
                     </p>
                     <button className="text-white text-lg bg-primary py-2 w-full">
-                      Get started
+                      <Link href="/SignUp">Get started</Link>
                     </button>
                   </span>
                   <span className="block">
@@ -76,7 +77,7 @@ const Pricing = () => {
                         {monthly.planprice}
                       </p>
                       <button className="text-white text-lg bg-primary py-2 w-full">
-                        Get started
+                        <Link href="/SignUp">Get Started</Link>
                       </button>
                     </span>
                     <span className="block">
